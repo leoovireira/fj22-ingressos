@@ -41,7 +41,6 @@ public class GerenciadorDeSessao {
 			return false;
 		}
 		return true;
-
 	}
 
 	private LocalDateTime getInicioSessaoComDiaDeHoje(Sessao sessao) {
@@ -52,4 +51,5 @@ public class GerenciadorDeSessao {
 	private LocalDateTime getTerminoSessaoComDiaDeHoje(Sessao sessao) {
 		LocalDateTime inicioSessaoNova = getInicioSessaoComDiaDeHoje(sessao);
 		return inicioSessaoNova.plus(sessao.getFilme().getDuracao());
+	}
 }
